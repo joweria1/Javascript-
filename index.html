@@ -1,30 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animal Adoption Center</title>
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <h1>Adopt a pet here</h1>
-    </header>
-    <p>
-      What type of pet would you like to adopt? :
-      <input type="text" id="petInput" />
-    </p>
-    <p>
-      Quantity :
-      <input type="text" id="quantityInput" />
-    </p>
-    <p>
-      Color :
-      <input type="text" id="colorInput" />
-    </p>
-    <p>
-      <button id="submitButton">Submit Order</button>
-    </p>
-    <p id="output"></p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Rated Movies</title>
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="validator.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="topTitle">IMDb Top Rated Movies</h1>
+    <div class="content">
+        <form action="movies.html" method="get" id="movie-form">
+            <!-- DROPDOWN MENU -->
+            <p>
+                <label>Select a language:</label>
+                <select name="language" id="language">
+                <option value="none">Select language</option>
+                <option value="en">English</option>
+                <option value="ko">Korean</option>
+                <option value="hi">Hindi</option>
+                <option value="ja">Japanese</option>
+                <option value="es">Spanish</option>
+                <option value="it">Italian</option>
+                </select><br>
+                <span class="err" id="err-language">Please select a language</span>
+            </p>
+            
+            <!-- RADIO BUTTON SELECTION -->
+            <p class="radio">
+                Choose a genre:<br>
+                <input type="radio" id="crime" name="genre" value="18">
+                <label>Crime</label><br>
+                <input type="radio" id="drama" name="genre" value="35">
+                <label>Drama</label><br>  
+                <input type="radio" id="animation" name="genre" value="16">
+                <label>Animation</label><br>
+                <input type="radio" id="romance" name="genre" value="10749">
+                <label>Romance</label>
+            </p>
+
+            <p class="radio">
+                <input type="radio" id="mystery" name="genre" value="80">
+                <label>Mystery</label><br>
+                <input type="radio" id="documentary" name="genre" value="10402">
+                <label>Documentary</label><br>
+                <input type="radio" id="comedy" name="genre" value="53">
+                <label>Comedy</label><br>
+                <input type="radio" id="adventure" name="genre" value="37">
+                <label>Adventure</label><br>
+                <span class="err" id="err-genre">Please choose a genre</span>
+            </p>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
 </html>
